@@ -1,5 +1,5 @@
 /*
- * ArthSetu design tokens — derived verbatim from DESIGN-cal.md (Cal.com system).
+ * ArthSetu design tokens - derived verbatim from DESIGN-cal.md (Cal.com system).
  * Never inline hex in components; always reference these custom properties.
  */
 :root {
@@ -30,7 +30,7 @@
   --hairline: #e5e7eb;
   --hairline-soft: #f3f4f6;
 
-  /* ---- Semantic (risk state only — never on primary CTA) ---- */
+  /* ---- Semantic (risk state only - never on primary CTA) ---- */
   --success: #10b981;
   --success-soft: #ecfdf5;
   --warning: #f59e0b;

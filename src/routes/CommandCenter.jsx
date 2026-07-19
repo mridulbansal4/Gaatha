@@ -41,7 +41,7 @@ function DecisionQueue() {
       <div className="row between" style={{ padding: '16px 20px', borderBottom: '1px solid var(--hairline)' }}>
         <div>
           <div className="title-md">Decision queue</div>
-          <div className="caption">AI-ranked by priority — highest-impact cases first</div>
+          <div className="caption">AI-ranked by priority - highest-impact cases first</div>
         </div>
         <Button variant="ghost" size="sm" onClick={() => navigate('/appraisals')}>
           View all <Icon.arrowRight width={15} height={15} />
@@ -133,9 +133,9 @@ function DistrictMap() {
   return (
     <div className="card" style={{ padding: 20 }}>
       <div className="row between" style={{ marginBottom: 14 }}>
-        <div><div className="title-md">District risk map</div><div className="caption">Recovery rate by district — click to scope</div></div>
+        <div><div className="title-md">District risk map</div><div className="caption">Recovery rate by district - click to scope</div></div>
         <div className="row gap-md">
-          {[['≥92%', 'var(--success)'], ['87–92%', 'var(--warning)'], ['<87%', 'var(--error)']].map(([l, c]) => (
+          {[['≥92%', 'var(--success)'], ['87-92%', 'var(--warning)'], ['<87%', 'var(--error)']].map(([l, c]) => (
             <span key={l} className="row gap-xxs caption"><span style={{ width: 8, height: 8, borderRadius: '50%', background: c }} />{l}</span>
           ))}
         </div>
@@ -152,7 +152,7 @@ export function CommandCenter() {
     <div className="page">
       <PageHead
         title="Command Center"
-        sub="Portfolio health, the priority decision queue, and live risk signals — everything that needs a decision now, in one place."
+        sub="Portfolio health, the priority decision queue, and live risk signals - everything that needs a decision now, in one place."
       />
       <div className="col gap-lg">
         <KpiStrip />

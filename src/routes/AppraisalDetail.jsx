@@ -104,7 +104,7 @@ function EvidencePanel({ c }) {
       <div className="title-md" style={{ marginBottom: 14 }}>Evidence</div>
       <div className="evidence-grid">
         <div>
-          <div className="caption" style={{ marginBottom: 8, fontWeight: 600, color: 'var(--ink)' }}>Repayment history — last 12 instalments</div>
+          <div className="caption" style={{ marginBottom: 8, fontWeight: 600, color: 'var(--ink)' }}>Repayment history - last 12 instalments</div>
           <RepaymentBars data={c.repayment_series} />
         </div>
         <div>
@@ -133,7 +133,7 @@ function EvidencePanel({ c }) {
 }
 
 function MemberRoster({ entityId }) {
-  // lightweight — pull members via entityById
+  // lightweight - pull members via entityById
   return null
 }
 

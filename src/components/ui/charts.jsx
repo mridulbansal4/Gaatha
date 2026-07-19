@@ -1,4 +1,4 @@
-// Hand-built SVG charts — self-contained, theme-token colored, no external library.
+// Hand-built SVG charts - self-contained, theme-token colored, no external library.
 
 export function LineChart({ data, height = 120, valueKey = 'amount', labelKey = 'period', stroke = 'var(--ink)', fill = true }) {
   const w = 100

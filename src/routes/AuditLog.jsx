@@ -70,7 +70,7 @@ export function AuditLog() {
     <div className="page">
       <PageHead
         title="Audit Log"
-        sub="Immutable, append-only record of every credit decision — AI recommendation versus human judgement, with override reasons captured."
+        sub="Immutable, append-only record of every credit decision - AI recommendation versus human judgement, with override reasons captured."
         actions={
           <Button variant="secondary" onClick={exportCsv}>
             <Icon.download width={16} height={16} />
@@ -103,7 +103,7 @@ export function AuditLog() {
           <div className="title-sm text-ink">Immutable governance trail</div>
           <div className="body-sm text-muted" style={{ marginTop: 2, maxWidth: 640 }}>
             Every decision is written once and never edited or removed. This append-only ledger is the
-            governance proof — showing what ArthSetu recommended, what the officer decided, and why any
+            governance proof - showing what ArthSetu recommended, what the officer decided, and why any
             override was made.
           </div>
         </div>

@@ -1,5 +1,5 @@
 // Credit cases with explainable factor breakdowns. The ArthSetu Score is a weighted
-// composite of factor sub-scores — deterministic, never random at read time.
+// composite of factor sub-scores - deterministic, never random at read time.
 
 import { ENTITIES } from './entities.js'
 import { zoneById } from './geo.js'
@@ -9,7 +9,7 @@ import { makeRng } from './rng.js'
 const PRODUCTS = {
   SHG: [
     { product: 'SHG-BLP Cash Credit', purpose: 'Group on-lending & crop inputs', min: 200000, max: 800000 },
-    { product: 'SHG Term Loan — Dairy', purpose: 'Milch cattle purchase', min: 300000, max: 900000 },
+    { product: 'SHG Term Loan - Dairy', purpose: 'Milch cattle purchase', min: 300000, max: 900000 },
     { product: 'SHG Micro-enterprise Loan', purpose: 'Tailoring & food processing units', min: 150000, max: 500000 },
   ],
   JLG: [
@@ -161,9 +161,9 @@ function recommendedAction(score, band, amount, schemeMatch) {
 }
 
 function verdictLine(score, band, entity) {
-  if (band === 'Low') return `Well-disciplined ${entity.type} with strong repayment and group health — low-risk lend.`
+  if (band === 'Low') return `Well-disciplined ${entity.type} with strong repayment and group health - low-risk lend.`
   if (band === 'Watch') return `Fundamentally sound ${entity.type}, but climate and indebtedness signals warrant a moderated, monitored exposure.`
-  return `Elevated risk: repayment or climate stress concentrates here — committee review recommended before any disbursal.`
+  return `Elevated risk: repayment or climate stress concentrates here - committee review recommended before any disbursal.`
 }
 
 // ---- Hero case, authored so the demo's three walked factors land precisely ----
@@ -177,7 +177,7 @@ function buildHeroCase() {
     { key: 'group_health', name: 'Group vintage & meeting regularity', weight: 0.15, value: 92, direction: '+', confidence: 94,
       source: 'E-Shakti meeting & savings register',
       evidence: '6-year vintage, 94% meeting attendance, savings balance ₹2.18L growing every quarter. 22 of last 24 monthly meetings held.',
-      note: 'Mature, disciplined group — a durable positive.' },
+      note: 'Mature, disciplined group - a durable positive.' },
     { key: 'internal_lending', name: 'Internal lending & recovery', weight: 0.12, value: 89, direction: '+', confidence: 91,
       source: 'Group internal loan ledger',
       evidence: '₹0.96L internal loans rotating among 8 members; 100% internal recovery over last cycle.',
@@ -188,16 +188,16 @@ function buildHeroCase() {
       note: 'Contained exposure; watch the two flagged members.' },
     { key: 'diversification', name: 'Crop & income diversification', weight: 0.10, value: 74, direction: '+', confidence: 80,
       source: 'Member occupation & cropping pattern',
-      evidence: 'Income across dairy, soybean, tur, tailoring and vending — not single-crop dependent.',
+      evidence: 'Income across dairy, soybean, tur, tailoring and vending - not single-crop dependent.',
       note: 'Diversification cushions a bad crop season.' },
     { key: 'climate', name: 'Climate exposure over loan window', weight: 0.15, value: 34, direction: '−', confidence: 88,
       source: 'IMD block rainfall + agro-advisory feed',
-      evidence: 'Osmanabad (Marathwada scarcity belt): rainfall deficit >40% forecast to overlap the Sep–Nov repayment window. Soybean yield risk elevated.',
+      evidence: 'Osmanabad (Marathwada scarcity belt): rainfall deficit >40% forecast to overlap the Sep-Nov repayment window. Soybean yield risk elevated.',
       note: 'The single largest drag. Principal moderation or a climate covenant is advised.' },
     { key: 'documentation', name: 'Documentation & KYC completeness', weight: 0.08, value: 95, direction: '+', confidence: 97,
       source: 'DigiLocker + branch document vault',
       evidence: 'Group resolution, 6-month passbook, meeting register and office-bearer KYC all verified via DigiLocker.',
-      note: 'Complete — no documentation gap.' },
+      note: 'Complete - no documentation gap.' },
     { key: 'scheme_uplift', name: 'Scheme eligibility uplift', weight: 0.05, value: 88, direction: '+', confidence: 90,
       source: 'NABARD scheme master match',
       evidence: 'Meets SHG-BLP prompt-repayment criteria → 3% interest subvention. Interest Subvention Scheme also applies on the crop-input portion.',
@@ -227,7 +227,7 @@ function buildHeroCase() {
     risk_band: band,
     confidence: 87,
     verdict:
-      'A well-disciplined group with excellent repayment and group health — but a forecast rainfall deficit on the Sep–Nov repayment window justifies moderating the principal and attaching a climate covenant rather than sanctioning the full ask.',
+      'A well-disciplined group with excellent repayment and group health - but a forecast rainfall deficit on the Sep-Nov repayment window justifies moderating the principal and attaching a climate covenant rather than sanctioning the full ask.',
     factors,
     recommended_action: rec,
     sla_due: '2026-07-22',
@@ -238,7 +238,7 @@ function buildHeroCase() {
     scheme_match: true,
     documents: [
       { name: 'Group resolution (Jul 2018).pdf', status: 'Verified', size: '212 KB' },
-      { name: 'Savings passbook — 6 months.pdf', status: 'Verified', size: '1.1 MB' },
+      { name: 'Savings passbook - 6 months.pdf', status: 'Verified', size: '1.1 MB' },
       { name: 'Meeting register extract.pdf', status: 'Verified', size: '486 KB' },
       { name: 'Office-bearer KYC (DigiLocker).pdf', status: 'Verified', size: '340 KB' },
       { name: 'Dairy activity estimate.pdf', status: 'Verified', size: '158 KB' },
@@ -257,7 +257,7 @@ function buildCase(rng, index) {
   const vintageYears = 2026 - Number(entity.formed_on.slice(0, 4))
 
   // Target a risk tier per case (~45% Low, ~33% Watch, ~22% High) and shape the point-in-time
-  // appraisal context to match — keeps factors, score and band internally consistent while
+  // appraisal context to match - keeps factors, score and band internally consistent while
   // guaranteeing a realistic spread across the portfolio.
   const roll = rng.next()
   const tier = roll < 0.22 ? 'High' : roll < 0.55 ? 'Watch' : 'Low'
@@ -305,7 +305,7 @@ function buildCase(rng, index) {
     priority: score < 55 ? rng.int(2, 5) : rng.int(4, 12),
     priority_reason:
       band === 'High'
-        ? 'Low score + high exposure — needs decision'
+        ? 'Low score + high exposure - needs decision'
         : band === 'Watch'
         ? 'Climate signal overlaps repayment window'
         : 'Routine appraisal within SLA',

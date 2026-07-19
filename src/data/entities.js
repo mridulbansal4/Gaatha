@@ -85,7 +85,7 @@ function nameFor(type, rng) {
 }
 
 function buildEntity(rng, type, index) {
-  // Round-robin districts so every district carries a handful of entities — keeps the
+  // Round-robin districts so every district carries a handful of entities - keeps the
   // district map, portfolio and climate-signal coverage consistent (no empty districts).
   const district = DISTRICTS[index % DISTRICTS.length]
   const block = rng.pick(district.blocks)

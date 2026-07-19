@@ -26,7 +26,7 @@ export const SEED_AUDIT = [
     amount_final: 240000,
     ai_amount: 280000,
     conditions: ['Quarterly monitoring', 'Second tranche on repayment milestone'],
-    override_reason: 'Trimmed exposure — two members carry concurrent MFI loans; capped at ₹2.4L pending closure.',
+    override_reason: 'Trimmed exposure - two members carry concurrent MFI loans; capped at ₹2.4L pending closure.',
     aligned: false,
   },
   {
@@ -68,7 +68,7 @@ export const SEED_AUDIT = [
     amount_final: 0,
     ai_amount: 420000,
     conditions: [],
-    override_reason: 'Field visit revealed dormant group — only 6 of 14 members active; returned for re-formation.',
+    override_reason: 'Field visit revealed dormant group - only 6 of 14 members active; returned for re-formation.',
     aligned: false,
   },
 ]

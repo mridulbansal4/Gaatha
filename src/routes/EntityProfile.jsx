@@ -22,7 +22,7 @@ import { useStore } from '../state/store.jsx'
 
 const SCHEME_TONE = {
   Eligible: 'success',
-  'Eligible — confirm docs': 'warning',
+  'Eligible - confirm docs': 'warning',
   'Not eligible': 'muted',
 }
 
@@ -177,7 +177,7 @@ export function EntityProfile() {
               <Field label="Formed on">{dateLabel(entity.formed_on)}</Field>
               <Field label="Bank linkage since">{dateLabel(entity.bank_linkage_since)}</Field>
               <Field label="Linkage bank">{entity.linkage_bank}</Field>
-              <Field label="Climate zone">{zone ? zone.label : '—'}</Field>
+              <Field label="Climate zone">{zone ? zone.label : '-'}</Field>
               <Field label="Primary activity">{entity.primary_activity}</Field>
               <Field label="Members">{entity.member_count.toLocaleString('en-IN')}</Field>
             </div>
@@ -185,7 +185,7 @@ export function EntityProfile() {
             <div className="col" style={{ gap: 6, marginTop: 'var(--s-md)' }}>
               <span className="caption">Crops</span>
               <div className="row wrap gap-xs">
-                {entity.crops.length ? entity.crops.map((c) => <TypeBadge key={c} type={c} />) : <span className="body-sm text-muted">—</span>}
+                {entity.crops.length ? entity.crops.map((c) => <TypeBadge key={c} type={c} />) : <span className="body-sm text-muted">-</span>}
               </div>
             </div>
 
@@ -243,7 +243,7 @@ export function EntityProfile() {
                           ))}
                         </div>
                       ) : (
-                        <span className="caption">—</span>
+                        <span className="caption">-</span>
                       )}
                     </td>
                   </tr>

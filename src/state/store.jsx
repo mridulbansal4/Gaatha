@@ -44,7 +44,7 @@ export function StoreProvider({ children }) {
       setDecisions((d) => ({ ...d, [caseCase.id]: { ...entry, action } }))
       track('decision_made', { case_id: caseCase.id, action, amount_final: amountFinal, aligned })
       if (overrideReason) track('override_made', { case_id: caseCase.id, ai_amount: rec.amount, human_amount: amountFinal })
-      pushToast({ kind: 'success', title: 'Decision recorded', body: `${action} — written to audit trail as ${entry.id}` })
+      pushToast({ kind: 'success', title: 'Decision recorded', body: `${action} - written to audit trail as ${entry.id}` })
       return entry
     },
     [pushToast],

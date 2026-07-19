@@ -9,7 +9,7 @@ import { useStore } from '../state/store.jsx'
 
 const STATUS_TONE = {
   Eligible: 'success',
-  'Eligible — confirm docs': 'warning',
+  'Eligible - confirm docs': 'warning',
   'Not eligible': 'muted',
 }
 
@@ -212,7 +212,7 @@ export function Schemes() {
                     style={{ maxWidth: 320 }}
                   >
                     {ENTITIES.map((e) => (
-                      <option key={e.id} value={e.id}>{`${e.name} — ${e.type}, ${e.village}`}</option>
+                      <option key={e.id} value={e.id}>{`${e.name} - ${e.type}, ${e.village}`}</option>
                     ))}
                   </select>
                 </label>

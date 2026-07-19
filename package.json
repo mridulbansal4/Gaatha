@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "ArthSetu — the decision-intelligence layer for rural India's credit. NABARD prototype.",
+  "description": "ArthSetu - the decision-intelligence layer for rural India's credit. NABARD prototype.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

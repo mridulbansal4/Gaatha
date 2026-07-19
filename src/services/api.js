@@ -1,4 +1,4 @@
-// Mock service layer — returns seed data with realistic latency so loading/empty/error
+// Mock service layer - returns seed data with realistic latency so loading/empty/error
 // states are exercised for real. No backend. A small failure rate can be forced for demos.
 
 import { CASES, caseById, casesForEntity } from '../data/cases.js'
@@ -98,7 +98,7 @@ export async function getEntity(id) {
 // ---- Schemes ----
 export async function getSchemes() { return respond(SCHEMES) }
 
-// Eligibility matcher — evaluates rules against an entity + optional case
+// Eligibility matcher - evaluates rules against an entity + optional case
 export async function matchSchemes(entityId) {
   const e = entityById(entityId)
   await delay(jitter(300, 600))
@@ -150,7 +150,7 @@ export async function matchSchemes(entityId) {
     })
     const hard = results.filter((r) => r.pass === false)
     const manual = results.filter((r) => r.pass === null)
-    const status = hard.length ? 'Not eligible' : manual.length ? 'Eligible — confirm docs' : 'Eligible'
+    const status = hard.length ? 'Not eligible' : manual.length ? 'Eligible - confirm docs' : 'Eligible'
     return { scheme: s, results, status, missing_docs: status !== 'Eligible' ? s.docs_required.slice(0, 2) : [] }
   })
 }

@@ -41,10 +41,10 @@ export const SCHEMES = [
     benefit_type: 'Collateral-free group credit',
     uplift: 'Refinance support to banks; collateral-free credit up to ₹1.6L per member',
     summary:
-      'Financing to informal groups of 4–10 members with joint liability, typically tenant farmers and share-croppers without land title.',
+      'Financing to informal groups of 4-10 members with joint liability, typically tenant farmers and share-croppers without land title.',
     eligibility_rules: [
       { key: 'entity_type', label: 'Entity is a JLG', test: 'type == JLG' },
-      { key: 'size', label: 'Group of 4–10 members', test: 'member_count in 4..10' },
+      { key: 'size', label: 'Group of 4-10 members', test: 'member_count in 4..10' },
       { key: 'activity', label: 'Members in same/allied activity', test: 'manual' },
     ],
     docs_required: ['Inter-se agreement', 'Member KYC', 'Activity/land-tenancy proof'],
@@ -104,7 +104,7 @@ export const SCHEMES = [
     benefit_type: 'Concessional term finance',
     uplift: 'Concessional finance for micro-irrigation, water harvesting, drought-tolerant seed',
     summary:
-      'Term finance for climate-adaptation assets — drip irrigation, farm ponds, protected cultivation — in vulnerable agro-climatic zones.',
+      'Term finance for climate-adaptation assets - drip irrigation, farm ponds, protected cultivation - in vulnerable agro-climatic zones.',
     eligibility_rules: [
       { key: 'zone', label: 'Entity in a vulnerable climate zone', test: 'climate_baseRisk >= 0.55' },
       { key: 'purpose', label: 'Loan funds a climate-adaptation asset', test: 'manual' },

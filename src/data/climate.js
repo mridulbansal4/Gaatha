@@ -20,7 +20,7 @@ export const CLIMATE_SIGNALS = [
     district: 'Osmanabad',
     type: 'Rainfall deficit',
     severity: 'High',
-    metric: '−43% vs normal (Jun–Jul)',
+    metric: '−43% vs normal (Jun-Jul)',
     window_start: '2026-07-01',
     window_end: '2026-11-15',
     affected_entity_ids: entitiesInDistrict('Osmanabad', 'SHG-MH-04821'),

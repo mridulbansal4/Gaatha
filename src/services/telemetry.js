@@ -1,4 +1,4 @@
-// Mock telemetry — logs analytics events to console for the "we measure everything" story.
+// Mock telemetry - logs analytics events to console for the "we measure everything" story.
 const buffer = []
 
 export function track(event, payload = {}) {

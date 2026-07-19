@@ -68,7 +68,7 @@ export function Appraisals() {
       <PageHead
         crumbs={[{ label: 'Appraisals' }]}
         title="Appraisal queue"
-        sub="Every credit case across SHGs, JLGs, FPOs and PACS — filter, sort and open any case to appraise."
+        sub="Every credit case across SHGs, JLGs, FPOs and PACS - filter, sort and open any case to appraise."
         actions={
           <Button variant="secondary" onClick={exportSel}>
             <Icon.download width={15} height={15} /> Export{selected.size ? ` (${selected.size})` : ''}

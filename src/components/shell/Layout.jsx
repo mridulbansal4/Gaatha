@@ -105,7 +105,7 @@ function Topbar({ onMenu }) {
             <div className="popover-head">Notifications</div>
             <div className="popover-item" onClick={() => { navigate('/climate'); setNotifOpen(false) }}>
               <Icon.alert width={15} height={15} style={{ color: 'var(--error)' }} />
-              <div><div style={{ fontWeight: 600, fontSize: 13 }}>Rainfall deficit — Osmanabad</div><div className="caption">7 repayment windows at risk</div></div>
+              <div><div style={{ fontWeight: 600, fontSize: 13 }}>Rainfall deficit - Osmanabad</div><div className="caption">7 repayment windows at risk</div></div>
             </div>
             <div className="popover-item" onClick={() => { navigate('/appraisals'); setNotifOpen(false) }}>
               <Icon.appraisal width={15} height={15} style={{ color: 'var(--warning)' }} />
@@ -134,7 +134,7 @@ export function Layout({ children }) {
           {children}
         </main>
         <footer className="foot-strip">
-          <span>ArthSetu · Decision-intelligence layer for rural credit — prototype for NABARD</span>
+          <span>ArthSetu · Decision-intelligence layer for rural credit - prototype for NABARD</span>
           <span className="mono" style={{ color: 'var(--on-dark-soft)' }}>DPI-ready · AA · DigiLocker · E-Shakti · v1.0</span>
         </footer>
       </div>

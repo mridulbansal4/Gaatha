@@ -1,4 +1,4 @@
-// Sattva — the explainable copilot engine. Deterministic responses keyed to intent +
+// Sattva - the explainable copilot engine. Deterministic responses keyed to intent +
 // case context, always shaped by the AI behaviour contract (PRD §7):
 // answer → why → evidence(sources) → confidence → possible impact → human review.
 
@@ -36,7 +36,7 @@ export async function askSattva(query, ctx = {}) {
     const src = kb('kb-blp-subvention')
     return answer({
       text: eligible
-        ? `Yes — ${c.entity_name} is eligible for the 3% interest subvention under SHG-BLP, contingent on continued prompt repayment.`
+        ? `Yes - ${c.entity_name} is eligible for the 3% interest subvention under SHG-BLP, contingent on continued prompt repayment.`
         : `${c.entity_name} does not currently clear the prompt-repayment bar for interest subvention.`,
       why: eligible
         ? 'The group has paid 34 of 35 instalments on time and meets the SHG-BLP prompt-repayment condition. The Interest Subvention Scheme additionally applies to the crop-input portion of the loan.'
@@ -56,8 +56,8 @@ export async function askSattva(query, ctx = {}) {
   if (intent === 'climate' && c) {
     const cf = c.factors.find((f) => f.key === 'climate')
     return answer({
-      text: `The climate factor is the single largest drag on ${c.entity_name}'s score — sub-score ${cf?.value ?? 34}/100.`,
-      why: 'A forecast rainfall deficit greater than 40% overlaps the Sep–Nov repayment window in the Marathwada scarcity belt, raising soybean yield risk exactly when instalments fall due.',
+      text: `The climate factor is the single largest drag on ${c.entity_name}'s score - sub-score ${cf?.value ?? 34}/100.`,
+      why: 'A forecast rainfall deficit greater than 40% overlaps the Sep-Nov repayment window in the Marathwada scarcity belt, raising soybean yield risk exactly when instalments fall due.',
       evidence: [
         cf?.evidence || 'IMD block rainfall shows −43% vs normal over the loan window.',
         'Active climate signal sig-osm-rain flags 7 repayment windows at risk in Osmanabad block.',
@@ -72,7 +72,7 @@ export async function askSattva(query, ctx = {}) {
   if (intent === 'recommend' && c) {
     const rec = c.recommended_action
     return answer({
-      text: `Recommended: ${rec.verb} — ₹${(rec.amount / 100000).toFixed(1)}L.`,
+      text: `Recommended: ${rec.verb} - ₹${(rec.amount / 100000).toFixed(1)}L.`,
       why: rec.text,
       evidence: [
         `ArthSetu Score ${c.arthsetu_score}/100 (${c.risk_band}), confidence ${c.confidence}%.`,
@@ -91,7 +91,7 @@ export async function askSattva(query, ctx = {}) {
     const missed = c.repayment_series.filter((r) => r.status === 'missed').length
     return answer({
       text: `Over the last 12 instalments: ${paid} paid on time, ${late} late, ${missed} missed.`,
-      why: 'Repayment discipline is weighted 22% in the score — the heaviest single factor. This group\'s record is strong and stable.',
+      why: 'Repayment discipline is weighted 22% in the score - the heaviest single factor. This group\'s record is strong and stable.',
       evidence: [
         `Recovery rate ${(entity?.recovery_rate * 100 || 97).toFixed(0)}%.`,
         'No instalment overdue beyond a week; delays cluster around festival cash-flow gaps, not distress.',
@@ -109,7 +109,7 @@ export async function askSattva(query, ctx = {}) {
     return answer({
       text: `The score is ${c.arthsetu_score}/100 (${c.risk_band}). It is a weighted composite of 8 evidence-backed factors.`,
       why: `The biggest lift is "${top.name}" (+); the biggest drag is "${bottom.name}" (${bottom.direction}). No factor enters the score without a linked source record.`,
-      evidence: c.factors.slice(0, 3).map((f) => `${f.name}: ${f.value}/100 — ${f.evidence}`),
+      evidence: c.factors.slice(0, 3).map((f) => `${f.name}: ${f.value}/100 - ${f.evidence}`),
       confidence: c.confidence,
       impact: 'Understanding the drivers lets you act on the specific weak factor rather than the headline number.',
       humanReview: true,
@@ -134,7 +134,7 @@ export async function askSattva(query, ctx = {}) {
 
   return answer({
     text: "I don't have a grounded answer for that yet.",
-    why: 'I only answer from NABARD scheme masters, the case ledger, and the policy knowledge base — I won\'t invent authority.',
+    why: 'I only answer from NABARD scheme masters, the case ledger, and the policy knowledge base - I won\'t invent authority.',
     evidence: ['No matching policy or case record found for this query.'],
     confidence: 30,
     impact: 'Rephrase toward a scheme, a factor, or this case, or route it to a human reviewer.',

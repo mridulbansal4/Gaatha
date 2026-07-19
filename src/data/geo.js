@@ -1,4 +1,4 @@
-// Geography — 8 districts across Maharashtra's Marathwada & western belt, each with blocks
+// Geography - 8 districts across Maharashtra's Marathwada & western belt, each with blocks
 // and villages. Climate zones drive risk exposure elsewhere in the model.
 
 export const STATE = 'Maharashtra'

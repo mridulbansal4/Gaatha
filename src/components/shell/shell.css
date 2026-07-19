@@ -41,9 +41,9 @@
 .breadcrumb .sep { color: var(--surface-strong); }
 
 /* ---- Sattva launcher (floating) ---- */
-.sattva-fab { position: fixed; bottom: 24px; right: 24px; height: 46px; padding: 0 18px 0 14px; border-radius: var(--r-pill); background: var(--surface-dark); color: var(--on-dark); display: flex; align-items: center; gap: 9px; box-shadow: var(--shadow-lg); z-index: 800; font-weight: 600; font-size: 14px; transition: transform var(--dur-fast) var(--ease); }
+.sattva-fab { position: fixed; bottom: 84px; right: 24px; height: 46px; padding: 0 18px 0 14px; border-radius: var(--r-pill); background: var(--surface-dark); color: var(--on-dark); display: flex; align-items: center; gap: 9px; box-shadow: var(--shadow-lg); z-index: 800; font-weight: 600; font-size: 14px; transition: transform var(--dur-fast) var(--ease); }
 .sattva-fab:hover { transform: translateY(-1px); }
-.sattva-spark { width: 22px; height: 22px; border-radius: 50%; background: linear-gradient(135deg, var(--badge-violet), var(--brand-accent)); display: grid; place-items: center; }
+.sattva-spark { width: 22px; height: 22px; border-radius: 50%; background: linear-gradient(135deg, #a7f3d0, #10b981); display: grid; place-items: center; }
 
 /* ---- Footer strip (scarce dark) ---- */
 .foot-strip { background: var(--surface-dark); color: var(--on-dark-soft); padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-top: auto; font-size: 12.5px; }

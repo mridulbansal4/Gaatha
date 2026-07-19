@@ -100,7 +100,7 @@ function SignalCard({ signal, highlighted, cardRef }) {
         <div className="col" style={{ gap: 2 }}>
           <span className="caption">Exposure window</span>
           <span className="body-sm text-ink" style={{ fontWeight: 600 }}>
-            {dateLabel(signal.window_start)} – {dateLabel(signal.window_end)}
+            {dateLabel(signal.window_start)} - {dateLabel(signal.window_end)}
           </span>
         </div>
         <div className="col" style={{ gap: 2 }}>
@@ -192,7 +192,7 @@ export function Climate() {
       <PageHead
         crumbs={[{ label: 'Workspace', to: '/' }, { label: 'Climate & Risk' }]}
         title="Climate & Risk"
-        sub="Block-level climate signals overlaid on portfolio exposure — the early-warning layer that feeds ArthSetu's alert engine and appraisal climate factor."
+        sub="Block-level climate signals overlaid on portfolio exposure - the early-warning layer that feeds ArthSetu's alert engine and appraisal climate factor."
       />
 
       {loading && (
@@ -228,7 +228,7 @@ export function Climate() {
               District recovery map
             </div>
             <div className="caption" style={{ marginBottom: 16 }}>
-              Recovery rate by district — climate exposure is read against these repayment baselines.
+              Recovery rate by district - climate exposure is read against these repayment baselines.
             </div>
             <RiskMiniMap
               districts={DISTRICTS}

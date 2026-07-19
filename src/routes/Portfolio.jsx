@@ -79,7 +79,7 @@ export function Portfolio() {
       <PageHead
         crumbs={[{ label: 'Command Center', to: '/' }, { label: 'Portfolio' }]}
         title="Portfolio"
-        sub="The entity directory across every SHG, JLG, FPO and PACS — savings, recovery and bank linkage at a glance."
+        sub="The entity directory across every SHG, JLG, FPO and PACS - savings, recovery and bank linkage at a glance."
       />
 
       {/* Summary strip: counts by type */}

@@ -65,7 +65,7 @@ export function SattvaDrawer() {
           {sattva.thread.length === 0 && (
             <div className="col gap-md">
               <div className="body-sm text-muted">
-                I answer from NABARD scheme masters, the case ledger and policy knowledge — every answer carries its evidence, confidence and whether a human should review. Try:
+                I answer from NABARD scheme masters, the case ledger and policy knowledge - every answer carries its evidence, confidence and whether a human should review. Try:
               </div>
               <div className="col gap-xs">
                 {SUGGESTED_PROMPTS.map((p) => (

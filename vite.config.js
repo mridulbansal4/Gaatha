@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// ArthSetu prototype — single-page React app, no backend.
+// ArthSetu prototype - single-page React app, no backend.
 export default defineConfig({
   plugins: [react()],
   server: {
