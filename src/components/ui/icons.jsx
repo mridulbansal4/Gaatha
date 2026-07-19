@@ -1,0 +1,30 @@
+// Minimal stroke icons (currentColor, 1.6 stroke). Keeps the bundle self-contained.
+const base = { width: 18, height: 18, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.7, strokeLinecap: 'round', strokeLinejoin: 'round' }
+
+export const Icon = {
+  command: (p) => <svg {...base} {...p}><rect x="3" y="3" width="7" height="7" rx="1.5" /><rect x="14" y="3" width="7" height="7" rx="1.5" /><rect x="3" y="14" width="7" height="7" rx="1.5" /><rect x="14" y="14" width="7" height="7" rx="1.5" /></svg>,
+  appraisal: (p) => <svg {...base} {...p}><path d="M4 4h16v16H4z" /><path d="M8 9h8M8 13h5" /><path d="m15.5 16.5 1.5 1.5 3-3" /></svg>,
+  portfolio: (p) => <svg {...base} {...p}><path d="M3 7h18M3 12h18M3 17h18" /><circle cx="7" cy="7" r="0.5" /></svg>,
+  climate: (p) => <svg {...base} {...p}><path d="M17 18a4 4 0 0 0 0-8 5 5 0 0 0-9.6-1.3A3.5 3.5 0 0 0 6 18z" /><path d="M8 20l-1 2M12 20l-1 2M16 20l-1 2" /></svg>,
+  schemes: (p) => <svg {...base} {...p}><path d="M12 3 3 8l9 5 9-5-9-5Z" /><path d="M3 12l9 5 9-5M3 16l9 5 9-5" /></svg>,
+  audit: (p) => <svg {...base} {...p}><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2" /><rect x="9" y="3" width="6" height="4" rx="1" /><path d="M9 12l2 2 4-4" /></svg>,
+  search: (p) => <svg {...base} {...p}><circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" /></svg>,
+  bell: (p) => <svg {...base} {...p}><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" /><path d="M13.7 21a2 2 0 0 1-3.4 0" /></svg>,
+  chevron: (p) => <svg {...base} {...p}><path d="m9 18 6-6-6-6" /></svg>,
+  chevronDown: (p) => <svg {...base} {...p}><path d="m6 9 6 6 6-6" /></svg>,
+  back: (p) => <svg {...base} {...p}><path d="m15 18-6-6 6-6" /></svg>,
+  spark: (p) => <svg {...base} {...p} stroke="none" fill="currentColor"><path d="M12 2l1.8 5.5L19 9l-5.2 1.5L12 16l-1.8-5.5L5 9l5.2-1.5L12 2Z" /></svg>,
+  close: (p) => <svg {...base} {...p}><path d="M18 6 6 18M6 6l12 12" /></svg>,
+  send: (p) => <svg {...base} {...p}><path d="m22 2-7 20-4-9-9-4 20-7Z" /></svg>,
+  external: (p) => <svg {...base} {...p}><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /></svg>,
+  download: (p) => <svg {...base} {...p}><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" /></svg>,
+  check: (p) => <svg {...base} {...p}><path d="M20 6 9 17l-5-5" /></svg>,
+  alert: (p) => <svg {...base} {...p}><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z" /></svg>,
+  filter: (p) => <svg {...base} {...p}><path d="M22 3H2l8 9.5V19l4 2v-8.5L22 3Z" /></svg>,
+  doc: (p) => <svg {...base} {...p}><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" /><path d="M14 2v6h6" /></svg>,
+  users: (p) => <svg {...base} {...p}><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.9" /></svg>,
+  location: (p) => <svg {...base} {...p}><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>,
+  arrowRight: (p) => <svg {...base} {...p}><path d="M5 12h14M12 5l7 7-7 7" /></svg>,
+  menu: (p) => <svg {...base} {...p}><path d="M3 12h18M3 6h18M3 18h18" /></svg>,
+  clock: (p) => <svg {...base} {...p}><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg>,
+}

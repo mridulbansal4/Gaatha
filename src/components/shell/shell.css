@@ -1,0 +1,63 @@
+.app-shell { display: grid; grid-template-columns: var(--rail-width) 1fr; min-height: 100vh; }
+
+/* ---- Left rail ---- */
+.rail { background: var(--surface-soft); border-right: 1px solid var(--hairline); display: flex; flex-direction: column; position: sticky; top: 0; height: 100vh; }
+.rail-brand { display: flex; align-items: center; gap: 10px; padding: 18px 20px; }
+.rail-logo { width: 30px; height: 30px; border-radius: 7px; background: var(--surface-dark); display: grid; place-items: center; flex-shrink: 0; }
+.rail-wordmark { font-family: var(--font-display); font-weight: 600; font-size: 18px; letter-spacing: var(--display-tracking); color: var(--ink); }
+.rail-nav { padding: 8px 12px; display: flex; flex-direction: column; gap: 2px; flex: 1; overflow-y: auto; }
+.rail-section { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted-soft); padding: 14px 12px 6px; }
+.nav-item { display: flex; align-items: center; gap: 11px; padding: 9px 12px; border-radius: var(--r-md); font-size: 14px; font-weight: 500; color: var(--body); transition: all var(--dur-fast) var(--ease); position: relative; }
+.nav-item:hover { background: var(--canvas); color: var(--ink); }
+.nav-item.active { background: var(--canvas); color: var(--ink); font-weight: 600; box-shadow: var(--shadow-sm); }
+.nav-item .nav-icon { width: 18px; height: 18px; flex-shrink: 0; opacity: 0.85; }
+.nav-item .nav-count { margin-left: auto; font-size: 11px; font-weight: 600; background: var(--surface-strong); color: var(--body); border-radius: var(--r-pill); padding: 1px 7px; }
+.nav-item.active .nav-count { background: var(--surface-dark); color: var(--on-dark); }
+.rail-foot { padding: 14px; border-top: 1px solid var(--hairline); }
+.rail-officer { display: flex; align-items: center; gap: 10px; padding: 8px; border-radius: var(--r-md); }
+
+/* ---- Top bar ---- */
+.topbar { height: var(--topbar-height); border-bottom: 1px solid var(--hairline); display: flex; align-items: center; gap: 16px; padding: 0 24px; background: var(--canvas); position: sticky; top: 0; z-index: 40; }
+.global-search { display: flex; align-items: center; gap: 8px; background: var(--surface-soft); border: 1px solid transparent; border-radius: var(--r-md); padding: 0 12px; height: 38px; width: 320px; transition: border-color var(--dur-fast) var(--ease); }
+.global-search:focus-within { border-color: var(--hairline); background: var(--canvas); }
+.global-search input { border: none; background: transparent; outline: none; width: 100%; font-size: 14px; }
+.scope-selector { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--body); font-weight: 500; }
+.scope-crumb { padding: 5px 10px; border-radius: var(--r-sm); }
+.scope-crumb.pickable { cursor: pointer; }
+.scope-crumb.pickable:hover { background: var(--surface-soft); }
+
+.icon-btn { width: 38px; height: 38px; border-radius: var(--r-md); display: grid; place-items: center; color: var(--body); transition: background var(--dur-fast) var(--ease); position: relative; }
+.icon-btn:hover { background: var(--surface-soft); color: var(--ink); }
+.notif-dot { position: absolute; top: 8px; right: 9px; width: 7px; height: 7px; border-radius: 50%; background: var(--error); border: 1.5px solid var(--canvas); }
+.avatar { width: 34px; height: 34px; border-radius: 50%; background: var(--badge-violet); color: white; display: grid; place-items: center; font-weight: 600; font-size: 13px; flex-shrink: 0; }
+.avatar-sm { width: 28px; height: 28px; font-size: 11px; }
+
+/* ---- Content region ---- */
+.content-area { min-width: 0; display: flex; flex-direction: column; }
+.page { padding: 28px 32px 64px; max-width: var(--content-max); width: 100%; margin: 0 auto; }
+.page-head { margin-bottom: 24px; }
+.breadcrumb { display: flex; align-items: center; gap: 7px; font-size: 13px; color: var(--muted); margin-bottom: 10px; flex-wrap: wrap; }
+.breadcrumb a:hover { color: var(--ink); }
+.breadcrumb .sep { color: var(--surface-strong); }
+
+/* ---- Sattva launcher (floating) ---- */
+.sattva-fab { position: fixed; bottom: 24px; right: 24px; height: 46px; padding: 0 18px 0 14px; border-radius: var(--r-pill); background: var(--surface-dark); color: var(--on-dark); display: flex; align-items: center; gap: 9px; box-shadow: var(--shadow-lg); z-index: 800; font-weight: 600; font-size: 14px; transition: transform var(--dur-fast) var(--ease); }
+.sattva-fab:hover { transform: translateY(-1px); }
+.sattva-spark { width: 22px; height: 22px; border-radius: 50%; background: linear-gradient(135deg, var(--badge-violet), var(--brand-accent)); display: grid; place-items: center; }
+
+/* ---- Footer strip (scarce dark) ---- */
+.foot-strip { background: var(--surface-dark); color: var(--on-dark-soft); padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-top: auto; font-size: 12.5px; }
+
+/* ---- Popover menu ---- */
+.popover { position: absolute; background: var(--canvas); border: 1px solid var(--hairline); border-radius: var(--r-lg); box-shadow: var(--shadow-md); z-index: 60; padding: 6px; min-width: 200px; animation: fadeUp var(--dur-fast) var(--ease) both; }
+.popover-item { padding: 9px 12px; border-radius: var(--r-sm); font-size: 13.5px; cursor: pointer; display: flex; align-items: center; gap: 8px; }
+.popover-item:hover { background: var(--surface-soft); }
+.popover-head { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted-soft); padding: 8px 12px 4px; }
+
+@media (max-width: 900px) {
+  .app-shell { grid-template-columns: 1fr; }
+  .rail { position: fixed; z-index: 100; transform: translateX(-100%); transition: transform var(--dur-med) var(--ease); width: 260px; }
+  .rail.open { transform: translateX(0); }
+  .global-search { width: 180px; }
+  .page { padding: 20px 16px 48px; }
+}

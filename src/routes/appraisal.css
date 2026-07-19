@@ -1,0 +1,47 @@
+.appraisal-grid { display: grid; grid-template-columns: 1fr 340px; gap: var(--s-lg); align-items: start; }
+.appraisal-main { min-width: 0; display: flex; flex-direction: column; gap: var(--s-lg); }
+.appraisal-side { position: sticky; top: 76px; display: flex; flex-direction: column; gap: var(--s-lg); }
+
+/* Featured dark score block — the single scarce dark surface on this screen */
+.score-block { background: var(--surface-dark); color: var(--on-dark); border-radius: var(--r-xl); padding: 24px; animation: scoreReveal 700ms var(--ease) both; }
+.score-block .score-num { font-family: var(--font-display); font-weight: 600; font-size: 52px; line-height: 1; letter-spacing: var(--display-tracking); }
+.score-gauge-wrap { position: relative; display: grid; place-items: center; }
+.score-gauge-center { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; }
+.score-verdict { color: var(--on-dark-soft); font-size: 13.5px; line-height: 1.5; }
+.score-meta-chip { background: var(--surface-dark-elevated); border-radius: var(--r-md); padding: 10px 12px; }
+
+/* Factor rows */
+.factor-row { border-bottom: 1px solid var(--hairline-soft); padding: 14px 0; }
+.factor-row:last-child { border-bottom: none; }
+.factor-head { display: grid; grid-template-columns: 22px 1fr 120px 90px 20px; align-items: center; gap: 12px; cursor: pointer; }
+.factor-dir { width: 22px; height: 22px; border-radius: 6px; display: grid; place-items: center; font-weight: 700; font-size: 14px; }
+.dir-pos { background: var(--success-soft); color: #047857; }
+.dir-neg { background: var(--error-soft); color: #b91c1c; }
+.dir-neu { background: var(--warning-soft); color: #b45309; }
+.factor-detail { margin-top: 12px; margin-left: 34px; padding: 14px; background: var(--surface-soft); border-radius: var(--r-md); animation: fadeUp var(--dur-fast) var(--ease) both; }
+.factor-weight { font-size: 12px; color: var(--muted); }
+
+.doc-row { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 1px solid var(--hairline); border-radius: var(--r-md); }
+.evidence-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-md); }
+
+.member-chip-flag { font-size: 11px; padding: 2px 6px; border-radius: var(--r-sm); background: var(--warning-soft); color: #b45309; font-weight: 600; }
+
+.decision-action { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; text-align: left; padding: 12px 14px; border: 1px solid var(--hairline); border-radius: var(--r-md); cursor: pointer; transition: all var(--dur-fast) var(--ease); width: 100%; }
+.decision-action:hover { border-color: var(--muted-soft); }
+.decision-action.selected { border-color: var(--ink); background: var(--surface-soft); box-shadow: inset 0 0 0 1px var(--ink); }
+.decision-action .da-title { font-weight: 600; font-size: 14px; color: var(--ink); }
+.decision-action .da-sub { font-size: 12px; color: var(--muted); }
+
+.amount-input-wrap { display: flex; align-items: center; gap: 8px; border: 1px solid var(--hairline); border-radius: var(--r-md); padding: 0 12px; height: 44px; }
+.amount-input-wrap input { border: none; outline: none; font-family: var(--font-mono); font-size: 18px; font-weight: 600; width: 100%; color: var(--ink); }
+
+.condition-chip { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; background: var(--surface-card); border-radius: var(--r-pill); font-size: 12.5px; }
+.condition-chip button { color: var(--muted); display: grid; place-items: center; }
+
+.decided-stamp { background: var(--success-soft); border: 1px solid #a7f3d0; border-radius: var(--r-lg); padding: 16px; }
+
+@media (max-width: 1080px) {
+  .appraisal-grid { grid-template-columns: 1fr; }
+  .appraisal-side { position: static; }
+  .evidence-grid { grid-template-columns: 1fr; }
+}
