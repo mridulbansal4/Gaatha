@@ -81,7 +81,7 @@ function DecisionQueue() {
                 <div className="caption">{c.tenure_months} mo</div>
               </div>
               <div className="row gap-xs">
-                <ScoreChip score={c.arthsetu_score} band={c.risk_band} />
+                <ScoreChip score={c.gaatha_score} band={c.risk_band} />
                 <RiskBadge band={c.risk_band} />
                 <Icon.chevron width={16} height={16} style={{ color: 'var(--muted-soft)' }} />
               </div>

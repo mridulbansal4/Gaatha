@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://placehold.co/1000x500/000000/FFFFFF/png?text=ArthSetu+Banner" alt="ArthSetu - Rural Financial Intelligence Operating System" width="100%"/>
+<img src="https://placehold.co/1000x500/000000/FFFFFF/png?text=Gaatha+Banner" alt="Gaatha - Rural Financial Intelligence Operating System" width="100%"/>
 
 <br/>
 
@@ -24,7 +24,7 @@ A decision-intelligence platform that turns fragmented rural economic signals in
 ---
 
 > **Every decision recommendation is backed by cited evidence and a confidence score - never a black-box output.**
-> The platform speaks in `ArthSetu Score`, confidence intervals, and explainable factors, ensuring that rural lending remains transparent and accountable.
+> The platform speaks in `Gaatha Score`, confidence intervals, and explainable factors, ensuring that rural lending remains transparent and accountable.
 
 > **Note on architecture.** This prototype is built as a zero-dependency, deterministic environment to guarantee a flawless demo experience. The data layer is fully local (`src/services/api.js`), mocking realistic latency and states without requiring an active backend.
 
@@ -46,15 +46,15 @@ A decision-intelligence platform that turns fragmented rural economic signals in
 
 Traditional rural credit relies on fragmented data, manual processes, and isolated insights. Field officers face immense challenges when assessing unbanked micro-enterprises due to sparse data and delayed interventions, leading to rejected credit applications.
 
-Most hackathon submissions answer *"build a dashboard."* ArthSetu answers *"build an operating system."* The unit of output is not just a chart; it is a **decision with a confidence level**. ArthSetu replaces static reporting with dynamic Decision Intelligence, providing step-by-step coaching for micro-enterprises and a copilot for field officers.
+Most hackathon submissions answer *"build a dashboard."* Gaatha answers *"build an operating system."* The unit of output is not just a chart; it is a **decision with a confidence level**. Gaatha replaces static reporting with dynamic Decision Intelligence, providing step-by-step coaching for micro-enterprises and a copilot for field officers.
 
 ---
 
 ## Why this is different
 
-Existing work stops at prediction. ArthSetu drives that prediction through every downstream decision.
+Existing work stops at prediction. Gaatha drives that prediction through every downstream decision.
 
-| | Traditional Dashboards | **ArthSetu (RFI-OS)** |
+| | Traditional Dashboards | **Gaatha (RFI-OS)** |
 |---|---|---|
 | Objective | Prediction only | **Decision Intelligence** |
 | Explainability | Black box | **Explainable (XAI)** - every factor has cited evidence |
@@ -86,7 +86,7 @@ The operational status board. View portfolio health, climate alerts, and the pri
 
 ### 2 - Credit Appraisal `/appraisals/:id`
 
-The deep dive into a specific case. Review the ArthSetu Score, the weighted factors (repayment discipline, climate exposure, scheme uplift), and the evidence layer.
+The deep dive into a specific case. Review the Gaatha Score, the weighted factors (repayment discipline, climate exposure, scheme uplift), and the evidence layer.
 
 ### 3 - Field Officer Copilot (Sattva)
 
@@ -105,7 +105,7 @@ A complete session, the way a loan officer would run it:
 ```mermaid
 flowchart LR
     A["Open Command<br/>Center /"] --> B["Select Top Case<br/>/appraisals/CASE-1042"]
-    B --> C["Review ArthSetu<br/>Score & Factors"]
+    B --> C["Review Gaatha<br/>Score & Factors"]
     C --> D["Ask Sattva<br/>for Scheme Insights"]
     D --> E["Override or<br/>Approve Decision"]
     E --> F["Verify in<br/>Audit Log /audit"]
@@ -118,7 +118,7 @@ flowchart LR
 1. **Open** `npm run dev` → `http://localhost:5173`.
 2. **Review** the portfolio health on the Command Center.
 3. **Select** the top priority enterprise case.
-4. **Analyze** the ArthSetu Score and the weighted factors.
+4. **Analyze** the Gaatha Score and the weighted factors.
 5. **Ask** the Sattva Copilot for additional context or scheme eligibility.
 6. **Action** the case by approving or overriding the AI recommendation.
 7. **Verify** the captured decision in the Audit Log.
@@ -135,7 +135,7 @@ flowchart TB
         SCH["Government Schemes"]
     end
 
-    subgraph CORE["ArthSetu Processing Pipeline"]
+    subgraph CORE["Gaatha Processing Pipeline"]
         ING["Data Ingestion"]
         KG["Knowledge Graph"]
         DT["Digital Twin"]
@@ -184,7 +184,7 @@ src/
 
 ## Technology stack
 
-Based on the official prototype repository structure, ArthSetu is built for speed, determinism, and rapid iteration.
+Based on the official prototype repository structure, Gaatha is built for speed, determinism, and rapid iteration.
 
 - **Frontend:** React (v18), React Router (v6)
 - **Build Tool:** Vite
@@ -196,7 +196,7 @@ Based on the official prototype repository structure, ArthSetu is built for spee
 
 ## Installation
 
-ArthSetu is built as a zero-dependency mock environment.
+Gaatha is built as a zero-dependency mock environment.
 
 **Prerequisites:**
 - Node.js (v18 or higher recommended)
@@ -204,10 +204,10 @@ ArthSetu is built as a zero-dependency mock environment.
 
 ```bash
 # Clone the repository
-git clone https://github.com/mridulbansal4/ArthSetu.git
+git clone https://github.com/mridulbansal4/Gaatha.git
 
 # Navigate to the directory
-cd ArthSetu
+cd Gaatha
 
 # Install dependencies
 npm install

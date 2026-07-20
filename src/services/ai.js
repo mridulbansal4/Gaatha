@@ -75,7 +75,7 @@ export async function askSattva(query, ctx = {}) {
       text: `Recommended: ${rec.verb} - ₹${(rec.amount / 100000).toFixed(1)}L.`,
       why: rec.text,
       evidence: [
-        `ArthSetu Score ${c.arthsetu_score}/100 (${c.risk_band}), confidence ${c.confidence}%.`,
+        `Gaatha Score ${c.gaatha_score}/100 (${c.risk_band}), confidence ${c.confidence}%.`,
         'Strongest drivers: repayment discipline (+), group health (+); largest drag: climate exposure (−).',
       ],
       confidence: c.confidence,
@@ -107,7 +107,7 @@ export async function askSattva(query, ctx = {}) {
     const top = [...c.factors].sort((a, b) => b.value * b.weight - a.value * a.weight)[0]
     const bottom = [...c.factors].sort((a, b) => a.value - b.value)[0]
     return answer({
-      text: `The score is ${c.arthsetu_score}/100 (${c.risk_band}). It is a weighted composite of 8 evidence-backed factors.`,
+      text: `The score is ${c.gaatha_score}/100 (${c.risk_band}). It is a weighted composite of 8 evidence-backed factors.`,
       why: `The biggest lift is "${top.name}" (+); the biggest drag is "${bottom.name}" (${bottom.direction}). No factor enters the score without a linked source record.`,
       evidence: c.factors.slice(0, 3).map((f) => `${f.name}: ${f.value}/100 - ${f.evidence}`),
       confidence: c.confidence,

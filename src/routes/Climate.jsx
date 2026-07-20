@@ -192,7 +192,7 @@ export function Climate() {
       <PageHead
         crumbs={[{ label: 'Workspace', to: '/' }, { label: 'Climate & Risk' }]}
         title="Climate & Risk"
-        sub="Block-level climate signals overlaid on portfolio exposure - the early-warning layer that feeds ArthSetu's alert engine and appraisal climate factor."
+        sub="Block-level climate signals overlaid on portfolio exposure - the early-warning layer that feeds Gaatha's alert engine and appraisal climate factor."
       />
 
       {loading && (

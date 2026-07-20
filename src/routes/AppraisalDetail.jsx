@@ -19,15 +19,15 @@ function ScoreBlock({ c }) {
   return (
     <div className="score-block">
       <div className="row between" style={{ marginBottom: 4 }}>
-        <span className="caption" style={{ color: 'var(--on-dark-soft)', letterSpacing: '0.05em', textTransform: 'uppercase', fontSize: 11 }}>ArthSetu Score</span>
+        <span className="caption" style={{ color: 'var(--on-dark-soft)', letterSpacing: '0.05em', textTransform: 'uppercase', fontSize: 11 }}>Gaatha Score</span>
         <span className="badge" style={{ background: 'var(--surface-dark-elevated)', color: 'var(--on-dark)' }}><span className="badge-dot" style={{ background: c.risk_band === 'Low' ? 'var(--success)' : c.risk_band === 'Watch' ? 'var(--warning)' : 'var(--error)' }} />{c.risk_band} risk</span>
       </div>
       <div className="row gap-lg" style={{ alignItems: 'center' }}>
         <div className="score-gauge-wrap">
-          <ScoreGauge score={c.arthsetu_score} band={c.risk_band} size={148} />
+          <ScoreGauge score={c.gaatha_score} band={c.risk_band} size={148} />
           <div className="score-gauge-center">
             <div>
-              <div className="score-num">{c.arthsetu_score}</div>
+              <div className="score-num">{c.gaatha_score}</div>
               <div className="caption" style={{ color: 'var(--on-dark-soft)', fontSize: 11 }}>of 100</div>
             </div>
           </div>
@@ -304,7 +304,7 @@ function LoadingScore() {
           <div className="score-block" style={{ display: 'grid', placeItems: 'center', minHeight: 180 }}>
             <div className="col gap-sm" style={{ alignItems: 'center' }}>
               <div style={{ width: 40, height: 40, borderRadius: '50%', border: '3px solid var(--surface-dark-elevated)', borderTopColor: 'var(--on-dark-soft)', animation: 'spin 0.9s linear infinite' }} />
-              <span className="caption" style={{ color: 'var(--on-dark-soft)' }}>Computing ArthSetu Score…</span>
+              <span className="caption" style={{ color: 'var(--on-dark-soft)' }}>Computing Gaatha Score…</span>
             </div>
           </div>
           <div className="card" style={{ padding: 20 }}><Skeleton h={20} w={200} /><div style={{ marginTop: 16 }}><Skeleton h={48} style={{ marginBottom: 10 }} /><Skeleton h={48} style={{ marginBottom: 10 }} /><Skeleton h={48} /></div></div>
@@ -345,7 +345,7 @@ export function AppraisalDetail() {
           </div>
         </div>
         <div className="row gap-xs">
-          <Button variant="secondary" onClick={() => openSattva(c.id, `Explain the ArthSetu Score for ${c.entity_name} and its main drivers.`)}>
+          <Button variant="secondary" onClick={() => openSattva(c.id, `Explain the Gaatha Score for ${c.entity_name} and its main drivers.`)}>
             <Icon.spark width={15} height={15} /> Ask Sattva about this case
           </Button>
         </div>

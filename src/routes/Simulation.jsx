@@ -107,7 +107,7 @@ export function Simulation() {
         <PageHead
           crumbs={[{ label: 'Command Center', to: '/' }, { label: 'Scenario Simulation' }]}
           title="Scenario Simulation"
-          sub="Watch ArthSetu appraise a rural enterprise from raw data ingestion to portfolio learning."
+          sub="Watch Gaatha appraise a rural enterprise from raw data ingestion to portfolio learning."
           actions={<Button variant="ghost" onClick={() => navigate('/')}>Exit Simulation</Button>}
         />
       </div>
@@ -132,7 +132,7 @@ export function Simulation() {
               <div className="body-md text-muted" style={{ maxWidth: 700, marginBottom: 24, lineHeight: 1.6 }}>
                 Savitri wants a loan of <strong className="text-ink">{inr(STORY.entity.amount_requested)}</strong> to expand her dairy business from 3 to 6 crossbred cows and add a milk chilling unit. 
                 Traditional banking might reject her due to a thin credit file and volatile agricultural cash flows. 
-                Let's see how ArthSetu processes her reality.
+                Let's see how Gaatha processes her reality.
               </div>
               {phase === 0 && (
                 <Button variant="primary" onClick={() => advance(600)}>Begin the Journey <Icon.arrowRight width={16} height={16}/></Button>
@@ -264,7 +264,7 @@ export function Simulation() {
           {phase >= 5 && (
             <div className="card sim-phase" style={{ padding: 32, background: 'var(--surface-dark)', color: 'var(--on-dark)' }}>
               <div className="row between" style={{ marginBottom: 24 }}>
-                <div className="title-md" style={{ color: 'inherit' }}>5. The ArthSetu Score</div>
+                <div className="title-md" style={{ color: 'inherit' }}>5. The Gaatha Score</div>
                 <RiskBadge band={STORY.band} />
               </div>
               <div className="row gap-xl wrap" style={{ alignItems: 'center' }}>
@@ -405,7 +405,7 @@ export function Simulation() {
                 <Icon.command width={20} height={20} style={{ color: 'var(--badge-violet)' }} />
               </div>
               <div className="body-md text-muted" style={{ marginBottom: 24 }}>
-                The decision doesn't end here. ArthSetu learns from Savitri's case to improve future appraisals in the district.
+                The decision doesn't end here. Gaatha learns from Savitri's case to improve future appraisals in the district.
               </div>
               <div className="row wrap gap-lg" style={{ marginBottom: 24 }}>
                 <div className="card-soft" style={{ padding: 16, flex: 1, minWidth: 200 }}>
@@ -424,7 +424,7 @@ export function Simulation() {
               <div className="row between wrap gap-md" style={{ padding: 20, background: 'var(--canvas)', border: '1px solid var(--hairline)', borderRadius: 'var(--r-md)' }}>
                 <div>
                   <div className="title-sm">Simulation Complete</div>
-                  <div className="caption">You have seen the full lifecycle of an ArthSetu decision.</div>
+                  <div className="caption">You have seen the full lifecycle of an Gaatha decision.</div>
                 </div>
                 <div className="row gap-sm">
                   <Button variant="secondary" onClick={() => { setPhase(0); window.scrollTo(0,0) }}>Restart</Button>

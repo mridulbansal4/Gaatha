@@ -1,4 +1,4 @@
-// Credit cases with explainable factor breakdowns. The ArthSetu Score is a weighted
+// Credit cases with explainable factor breakdowns. The Gaatha Score is a weighted
 // composite of factor sub-scores - deterministic, never random at read time.
 
 import { ENTITIES } from './entities.js'
@@ -223,7 +223,7 @@ function buildHeroCase() {
     status: 'New',
     priority: 1,
     priority_reason: 'High amount + rainfall-deficit alert overlaps the repayment window',
-    arthsetu_score: score,
+    gaatha_score: score,
     risk_band: band,
     confidence: 87,
     verdict:
@@ -309,7 +309,7 @@ function buildCase(rng, index) {
         : band === 'Watch'
         ? 'Climate signal overlaps repayment window'
         : 'Routine appraisal within SLA',
-    arthsetu_score: score,
+    gaatha_score: score,
     risk_band: band,
     confidence,
     verdict: verdictLine(score, band, entity),

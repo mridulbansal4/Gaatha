@@ -25,7 +25,7 @@ function Sidebar({ open }) {
         <div className="rail-logo">
           <svg width="18" height="18" viewBox="0 0 32 32"><path d="M9 22 L16 9 L23 22" stroke="white" strokeWidth="2.4" fill="none" strokeLinecap="round" strokeLinejoin="round" /><line x1="12" y1="17" x2="20" y2="17" stroke="white" strokeWidth="2.4" strokeLinecap="round" /></svg>
         </div>
-        <span className="rail-wordmark">ArthSetu</span>
+        <span className="rail-wordmark">Gaatha</span>
       </div>
       <nav className="rail-nav">
         <div className="rail-section">Workspace</div>
@@ -135,7 +135,7 @@ export function Layout({ children }) {
           {children}
         </main>
         <footer className="foot-strip">
-          <span>ArthSetu · Decision-intelligence layer for rural credit - prototype for NABARD</span>
+          <span>Gaatha · Decision-intelligence layer for rural credit - prototype for NABARD</span>
           <span className="mono" style={{ color: 'var(--on-dark-soft)' }}>DPI-ready · AA · DigiLocker · E-Shakti · v1.0</span>
         </footer>
       </div>

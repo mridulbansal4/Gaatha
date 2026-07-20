@@ -31,7 +31,7 @@ export function StoreProvider({ children }) {
         officer: 'Priya Deshmukh',
         case_id: caseCase.id,
         entity_name: caseCase.entity_name,
-        ai_recommendation: `${rec.verb} ₹${(rec.amount / 100000).toFixed(1)}L (${caseCase.risk_band}, score ${caseCase.arthsetu_score})`,
+        ai_recommendation: `${rec.verb} ₹${(rec.amount / 100000).toFixed(1)}L (${caseCase.risk_band}, score ${caseCase.gaatha_score})`,
         human_decision: action,
         amount_final: amountFinal,
         ai_amount: rec.amount,

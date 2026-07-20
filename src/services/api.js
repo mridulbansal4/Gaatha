@@ -16,7 +16,7 @@ export function setForceError(v) { FORCE_ERROR = v }
 
 async function respond(data, { min = 240, max = 620 } = {}) {
   await delay(jitter(min, max))
-  if (FORCE_ERROR) throw new Error('Network error: could not reach ArthSetu data services.')
+  if (FORCE_ERROR) throw new Error('Network error: could not reach Gaatha data services.')
   return data
 }
 
@@ -63,7 +63,7 @@ export async function getCases(filters = {}) {
     )
   }
   if (filters.sort === 'amount') list.sort((a, b) => b.amount_requested - a.amount_requested)
-  else if (filters.sort === 'score') list.sort((a, b) => a.arthsetu_score - b.arthsetu_score)
+  else if (filters.sort === 'score') list.sort((a, b) => a.gaatha_score - b.gaatha_score)
   else if (filters.sort === 'sla') list.sort((a, b) => a.sla_due.localeCompare(b.sla_due))
   else list.sort((a, b) => a.priority - b.priority)
   return respond(list)
