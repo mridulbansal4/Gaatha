@@ -15,6 +15,7 @@ const NAV = [
   { to: '/climate', label: 'Climate & Risk', icon: 'climate' },
   { to: '/schemes', label: 'Schemes', icon: 'schemes' },
   { to: '/audit', label: 'Audit Log', icon: 'audit' },
+  { to: '/simulation', label: 'Scenario Simulation', icon: 'simulation' },
 ]
 
 function Sidebar({ open }) {

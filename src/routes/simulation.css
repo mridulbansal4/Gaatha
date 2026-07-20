@@ -1,0 +1,242 @@
+/* Scenario Simulation specific styles */
+
+.sim-page {
+  padding: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Progress Rail */
+.sim-rail {
+  position: sticky;
+  top: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sim-step {
+  display: flex;
+  gap: 12px;
+  opacity: 0.4;
+  transition: all var(--dur-med) var(--ease);
+  cursor: pointer;
+}
+
+.sim-step.active {
+  opacity: 1;
+}
+
+.sim-step.completed {
+  opacity: 0.7;
+}
+
+.sim-step-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--muted);
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted);
+  background: var(--canvas);
+  position: relative;
+  z-index: 2;
+  transition: all var(--dur-med) var(--ease);
+}
+
+.sim-step.active .sim-step-dot {
+  border-color: var(--badge-violet);
+  color: white;
+  background: var(--badge-violet);
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15);
+}
+
+.sim-step.completed .sim-step-dot {
+  border-color: var(--success);
+  color: white;
+  background: var(--success);
+}
+
+.sim-step-line {
+  position: absolute;
+  top: 24px;
+  left: 11px;
+  width: 2px;
+  height: calc(100% + 20px - 24px);
+  background: var(--hairline);
+  z-index: 1;
+}
+
+.sim-step:last-child .sim-step-line {
+  display: none;
+}
+
+.sim-step-label {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink);
+  padding-top: 2px;
+}
+
+.sim-step-sub {
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+/* Content Area */
+.sim-content {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-bottom: 120px;
+}
+
+.sim-phase {
+  animation: fadeUp var(--dur-med) var(--ease) both;
+}
+
+/* Staggered entry for items */
+.sim-stagger > * {
+  animation: fadeUp var(--dur-med) var(--ease) both;
+}
+.sim-stagger > *:nth-child(1) { animation-delay: 50ms; }
+.sim-stagger > *:nth-child(2) { animation-delay: 150ms; }
+.sim-stagger > *:nth-child(3) { animation-delay: 250ms; }
+.sim-stagger > *:nth-child(4) { animation-delay: 350ms; }
+.sim-stagger > *:nth-child(5) { animation-delay: 450ms; }
+
+/* Working/Loading states */
+.sim-working {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 24px;
+  background: var(--surface-soft);
+  border-radius: var(--r-md);
+  border: 1px dashed var(--muted-soft);
+  color: var(--muted);
+}
+
+.sim-spinner {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--muted-soft);
+  border-top-color: var(--badge-violet);
+  animation: spin 0.8s linear infinite;
+}
+
+/* Knowledge Graph */
+.sim-graph {
+  background: var(--surface-dark);
+  border-radius: var(--r-xl);
+  padding: 32px;
+  position: relative;
+  min-height: 360px;
+  overflow: hidden;
+}
+
+.sim-node {
+  position: absolute;
+  background: var(--surface-dark-elevated);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--on-dark);
+  padding: 10px 16px;
+  border-radius: var(--r-pill);
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease);
+  animation: fadeIn 600ms var(--ease) both;
+}
+
+.sim-node:hover {
+  background: var(--badge-violet);
+  border-color: var(--badge-violet);
+  transform: translate(-50%, -52%);
+}
+
+.sim-node-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.sim-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sim-edge path {
+  fill: none;
+  stroke: rgba(255,255,255,0.4);
+  stroke-width: 2;
+  stroke-dasharray: 4;
+  animation: march 20s linear infinite;
+  vector-effect: non-scaling-stroke;
+}
+
+@keyframes march {
+  to { stroke-dashoffset: -200; }
+}
+
+/* Animated number counter */
+.sim-counter {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 900px) {
+  .sim-page {
+    grid-template-columns: 1fr;
+    padding: 20px 16px;
+  }
+  .sim-rail {
+    position: static;
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .sim-step {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    min-width: 100px;
+  }
+  .sim-step-line {
+    top: 11px;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+  }
+  .sim-step-label {
+    font-size: 12px;
+  }
+  .sim-step-sub {
+    display: none;
+  }
+}
