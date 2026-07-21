@@ -1,9 +1,5 @@
 <div align="center">
 
-<img src="https://placehold.co/1000x500/000000/FFFFFF/png?text=ArthSetu+Banner" alt="ArthSetu - Rural Financial Intelligence Operating System" width="100%"/>
-
-<br/>
-
 **Prediction → Decision → Explainability → Action**
 
 A decision-intelligence platform that turns fragmented rural economic signals into actionable credit recommendations - cash flow forecasting, knowledge graph reasoning, explainable AI, and a human-in-the-loop audit trail, end to end.
@@ -69,8 +65,6 @@ Existing work stops at prediction. ArthSetu drives that prediction through every
 ## The core interface
 
 The single most important view. The Command Center consolidates portfolio health, the AI-ranked decision queue, and climate alerts into a single actionable surface.
-
-![Command Center](https://placehold.co/1000x500/111111/FFFFFF/png?text=Command+Center)
 
 > **No hidden logic.** The system forces human review before any final action is taken, logging the interaction in a permanent audit trail.
 
