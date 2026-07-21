@@ -27,4 +27,5 @@ export const Icon = {
   arrowRight: (p) => <svg {...base} {...p}><path d="M5 12h14M12 5l7 7-7 7" /></svg>,
   menu: (p) => <svg {...base} {...p}><path d="M3 12h18M3 6h18M3 18h18" /></svg>,
   clock: (p) => <svg {...base} {...p}><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg>,
+  simulation: (p) => <svg {...base} {...p}><polygon points="5 3 19 12 5 21 5 3" strokeLinejoin="round" /></svg>,
 }

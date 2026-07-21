@@ -38,7 +38,7 @@ export const KNOWLEDGE = [
     title: 'E-Shakti digitisation & appraisal confidence',
     authority: 'NABARD E-Shakti',
     body:
-      'E-Shakti digitises SHG books of account, exposing meeting regularity, savings compounding and internal-loan recovery to the lending bank in real time. Digitised groups raise appraisal confidence and cut linkage decision time. Absence of E-Shakti data is itself a confidence-lowering signal in the ArthSetu score.',
+      'E-Shakti digitises SHG books of account, exposing meeting regularity, savings compounding and internal-loan recovery to the lending bank in real time. Digitised groups raise appraisal confidence and cut linkage decision time. Absence of E-Shakti data is itself a confidence-lowering signal in the Gaatha score.',
     tags: ['eshakti', 'digital', 'confidence', 'shg'],
   },
   {

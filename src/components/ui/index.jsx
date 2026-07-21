@@ -29,7 +29,7 @@ export function TypeBadge({ type }) {
 export function ScoreChip({ score, band }) {
   const cls = band === 'Low' ? 'score-low' : band === 'Watch' ? 'score-watch' : 'score-high'
   return (
-    <span className={`score-chip ${cls}`} title={`ArthSetu Score ${score}/100 · ${band} risk`}>
+    <span className={`score-chip ${cls}`} title={`Gaatha Score ${score}/100 · ${band} risk`}>
       {score}
       <span className="score-max">/100</span>
     </span>
@@ -105,7 +105,7 @@ export function ErrorState({ onRetry, message }) {
     <div className="state-block fade-in">
       <div className="state-icon" style={{ color: 'var(--error)', background: 'var(--error-soft)', fontSize: 20 }}>!</div>
       <div className="title-sm text-ink">Couldn't load data</div>
-      <div className="body-sm text-muted" style={{ maxWidth: 340 }}>{message || 'Something went wrong reaching ArthSetu data services.'}</div>
+      <div className="body-sm text-muted" style={{ maxWidth: 340 }}>{message || 'Something went wrong reaching Gaatha data services.'}</div>
       {onRetry && <Button variant="secondary" size="sm" onClick={onRetry}>Retry</Button>}
     </div>
   )

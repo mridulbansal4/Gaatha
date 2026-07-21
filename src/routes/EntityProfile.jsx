@@ -286,7 +286,7 @@ export function EntityProfile() {
                       <td className="mono" style={{ fontSize: 13 }}>{c.id}</td>
                       <td className="body-sm">{c.product}</td>
                       <td className="mono" style={{ textAlign: 'right' }}>{inr(c.amount_requested)}</td>
-                      <td><ScoreChip score={c.arthsetu_score} band={c.risk_band} /></td>
+                      <td><ScoreChip score={c.gaatha_score} band={c.risk_band} /></td>
                       <td><RiskBadge band={c.risk_band} /></td>
                       <td><Badge tone={STATUS_TONE[c.status] || 'muted'}>{c.status}</Badge></td>
                     </tr>

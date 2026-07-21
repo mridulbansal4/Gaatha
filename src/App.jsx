@@ -8,6 +8,7 @@ import { EntityProfile } from './routes/EntityProfile.jsx'
 import { Climate } from './routes/Climate.jsx'
 import { Schemes } from './routes/Schemes.jsx'
 import { AuditLog } from './routes/AuditLog.jsx'
+import { Simulation } from './routes/Simulation.jsx'
 
 export function App() {
   return (
@@ -21,6 +22,7 @@ export function App() {
         <Route path="/climate" element={<Climate />} />
         <Route path="/schemes" element={<Schemes />} />
         <Route path="/audit" element={<AuditLog />} />
+        <Route path="/simulation" element={<Simulation />} />
       </Routes>
     </Layout>
   )
