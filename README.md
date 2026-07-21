@@ -1,5 +1,7 @@
 <div align="center">
 
+# GAATHA
+
 **Prediction → Decision → Explainability → Action**
 
 A decision-intelligence platform that turns fragmented rural economic signals into actionable credit recommendations - cash flow forecasting, knowledge graph reasoning, explainable AI, and a human-in-the-loop audit trail, end to end.
@@ -65,6 +67,8 @@ Existing work stops at prediction. Gaatha drives that prediction through every d
 ## The core interface
 
 The single most important view. The Command Center consolidates portfolio health, the AI-ranked decision queue, and climate alerts into a single actionable surface.
+
+*The Command Center provides a real-time visualization of the loan portfolio health, flags at-risk micro-enterprises based on emerging climate data, and offers an AI-prioritized queue of cases requiring loan officer review.*
 
 > **No hidden logic.** The system forces human review before any final action is taken, logging the interaction in a permanent audit trail.
 
